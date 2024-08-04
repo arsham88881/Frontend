@@ -1,0 +1,182 @@
+/* fonts */
+@font-face {
+  font-family: "vazir_latin_thin";
+  src: url("/Assets/Lib/Fonts/Vazir_latin/Vazir-Thin.woff") format("woff"),
+    url("/Assets/Lib/Fonts/Vazir_latin/Vazir-Thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Vazir_latin_Medium";
+  src: url("/Assets/Lib/Fonts/Vazir_latin/Vazir-Medium.woff") format("woff"),
+    url("/Assets/Lib/Fonts/Vazir_latin/Vazir-Medium.woff2") format("woff2");
+}
+
+/*==================================================================== global  style */
+
+:root {
+  --clr-text: #111;
+  --ff-primary: "vazir_latin_thin";
+  --default-transtion : all 0.5s ease-in-out;
+  /* color polet */
+  --clr-darkRed : #d90429;
+  --clr-lightRed: #ef233c;
+  --clr-White: #edf2f4;
+  --clr-gray: #8d99ae;
+  --clr-Dark: #01070e;
+
+}
+/*===========================/////
+/////////////////// override bootstrap classes
+=============================//// */
+.bg-danger , .border-danger , .btn-danger {
+  background-color: var(--clr-lightRed);
+}
+.text-white {
+  color: var(--clr-White);
+}
+.bg-black {
+  background-color: var(--clr-Dark)
+}
+.modal-dialog {
+  direction: rtl;
+  
+}
+.modal-content{
+  background-color: var(--clr-Dark);
+  color: var(--clr-White);
+}
+/* =============================scroller new style============================*/
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-Dark); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-darkRed); 
+}
+/* =============================scroller new style end============================*/
+input::placeholder {
+  color: var(--clr-Dark);
+  opacity: 1; 
+}
+input::-ms-input-placeholder { /* Edge 12 -18 */
+  color: var(--clr-Dark);
+}
+label {
+  color: var(--clr-Dark);
+  direction: rtl;
+}
+.form-floating>label{
+  left: unset;
+}
+input {
+  direction: rtl;
+}
+/*===========================/////
+/////////////////// override bootstrap classes end
+=============================//// */
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-gray);
+}
+
+* {
+  border: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  transition: var(--default-transtion)
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a:link,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: var(--clr-White);
+}
+/*==================================================================== global  style end */
+/*============================================================= customer page part css */
+.Sidebar {
+  min-width: 100px;
+  box-shadow: inset 0 0 5px var(--clr-gray);
+}
+.Sidebar::-webkit-scrollbar,
+.sidebar-Horizontal::-webkit-scrollbar {
+  display: none;
+}
+.sidebar-Horizontal {
+  display: none;
+  box-shadow: inset 0 0 5px var(--clr-gray);
+}
+.bottom-navbar {
+  width: 100%;
+  z-index: 3;
+ }
+@media screen and (min-width: 767px) {
+  .Sidebar {
+    display: none;
+    width: 100px;
+  }
+  .sidebar-Horizontal {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .bottom-navbar{
+    width: 500px;
+  }
+  .btn-navbar-container{
+    display: flex;
+    justify-content: center;
+  }
+}
+.CateguryItem-Horizontal {
+  display: inline-block;
+}
+.Item-Img-cotainer {
+  width: 84px;
+  height: 84px;
+  /* object-fit; */
+}
+.Item-container{
+  padding-bottom: 100px;
+}
+.price {
+  width: 30%;
+}
+.item-with-image , .item-without-image {
+  box-shadow: inset 0 0 2px var(--clr-gray);
+}
+@media screen and (min-width: 767px) {
+  .Item-container {
+    padding-top: 150px;
+  }
+  .item-with-image{
+    width: 10rem;
+  }
+  .item-without-image{
+    width: 18rem;
+    height: 8rem;
+  }
+  .price{
+    width: 50%;
+  }
+}
+
+/*============================================================= customer page part css end */
